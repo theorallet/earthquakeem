@@ -18,15 +18,19 @@
     
     
     
-    <!-- we need to load jquery before using it -->
+    <!-- since our script is dependant on jQuery, we need to load it before using it -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
+    <!-- Once the dependencies are loaded, we can  -->
     <script>
       // once loaded, we can use jQuery to create elements:
-      jQuery( "body" ).prepend( "<p>This p was created using jQuery</p>" );
+      jQuery( "body" ).prepend( "<p>This paragraph was created using jQuery!</p>" );
+      // we first select the "body" element of our page
+      // then we use the method "prepend" to insert HTML code at the beginning of the "body" element
+      // try the "append" method instead to insert HTML code at the end of the "body" element
       
       
-      // we can manipulate the content of our elements
+      // we can also manipulate the text of our elements
       $( "h1" ).text( "Hello jquery!" );
       // here we use the selector "h1" to 
       
