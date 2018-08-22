@@ -15,10 +15,6 @@
     <p>
       Maecenas vel odio ut quam accumsan hendrerit. Morbi fermentum augue felis, sed efficitur velit interdum eget. Nunc tincidunt libero in bibendum laoreet. Nulla leo purus, tristique ut sollicitudin vel, commodo non odio. Quisque tempor egestas odio, ut ornare lorem iaculis interdum. Aenean nec neque turpis. Nunc et iaculis lacus. Nulla viverra nulla eget maximus accumsan. Sed efficitur, mauris at tempus condimentum, quam felis pretium justo, eget accumsan orci libero quis lacus. Aliquam vehicula vitae arcu at tempus. Nulla pretium consectetur ligula, at pretium justo ornare sit amet. Nam id magna mi. Ut euismod urna vitae mi facilisis consequat.
     </p>
-
-    <p>
-      In nec nulla nec ipsum auctor euismod quis vel ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed laoreet elit semper elementum gravida. Proin consectetur tristique tincidunt. Cras quis tellus lorem. Maecenas scelerisque ornare vulputate. Aenean nec tellus at est mattis rhoncus quis et nunc. Sed non erat eu nulla vestibulum hendrerit. Morbi vestibulum metus vulputate, finibus neque a, lobortis quam. Fusce blandit facilisis libero at molestie. Praesent pharetra placerat tortor, quis elementum ligula dapibus sit amet.
-    </p>
     
     
     
@@ -27,14 +23,16 @@
     
     <script>
       // once loaded, we can use jQuery to create elements:
-      jQuery( 'body' ).prepend( "<p>This p was created using jQuery</p>" );
+      jQuery( "body" ).prepend( "<p>This p was created using jQuery</p>" );
       
       
       // we can manipulate the content of our elements
-      $( 'h1' ).text( 'hello jquery!' );
+      $( "h1" ).text( "Hello jquery!" );
+      // here we use the selector "h1" to 
       
       
-      $( 'p' ).css( { 'color': '#111', 'font-family': 'sans-serif' });
+      $( "p" ).css( { "color": "#666", "font-family": "sans-serif" } );
+      // as you can see this affect all the paragrapghs in our page, even the one created by jQuery at the beginning of our script
     </script>      </body>
 </html>
 
