@@ -1,5 +1,5 @@
 // once loaded, we can use jQuery in our scripts to create elements:
-jQuery( "body" ).prepend( "<p>This paragraph was created using jQuery!</p>" );
+jQuery( "body" ).prepend( "<p>This paragraph is created using jQuery!</p>" );
 // jQuery selects the "body" element of our page, and wraps it in a JS object with all jquery methods
 // and we call the "prepend" method to insert HTML code at the beginning of the "body" element
 // try the "append" method instead to insert HTML code at the end of the "body" element
