@@ -12,7 +12,7 @@ $( "#title" ).text( "Hello jquery!" );
 
 // or we can manipulate the css of elements
 $( "p" ).css( { 
-  "color": "red", 
+  "color": "hsl(" + Math.random() * 360 + ", 50%, 100% )", 
   "font-family": "sans-serif" 
 } );
 // as you can see this affect all the paragrapghs in our page, even the one created by jQuery at the beginning of our script
