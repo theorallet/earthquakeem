@@ -11,9 +11,8 @@ $( "#title" ).text( "Hello jquery!" );
 // we select the "h1" element and use the "text" method to set its inner text
 
 // or we can manipulate the css of elements
-var hue = Math.random() * 360; // Math.random() returns a random number between 0 and 1
 $( "p" ).css( {
-  "background": "hsl(" + hue + ", 100%, 50% )",
+  "background": "#c0ffee",
   "font-family": "sans-serif",
   "padding": "10px"
 } );
