@@ -7,13 +7,13 @@ jQuery( "body" ).prepend( "<p>This paragraph is created using jQuery!</p>" );
 
 // we can also manipulate the text of our elements
 $( "#title" ).text( "Hello jquery!" );
-// ("$" is the shorthand for "jQuery")
+// ( "$" is the shorthand for "jQuery" )
 // we select the "h1" element and use the "text" method to set its inner text
 
 // or we can manipulate the css of elements
 var hue = Math.random() * 360; // Math.random() returns a random number between 0 and 1
-$( "p" ).css( { 
-  "background": "hsl(" + hue + ", 100%, 50% )", 
+$( "p" ).css( {
+  "background": "hsl(" + hue + ", 100%, 50% )",
   "font-family": "sans-serif",
   "padding": "10px"
 } );
