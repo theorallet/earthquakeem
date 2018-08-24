@@ -17,4 +17,4 @@ $( "p" ).css( {
   "padding": "10px"
 } );
 // as you can see this affect all the paragrapghs in our page, even the one created by jQuery at the beginning of our script
-// here we are passing an object as argument to the "css" method to set several properties in a single instruction
+// here we are passing an object "{key: value, ...}" as argument to the "css" method to set several properties in a single instruction
