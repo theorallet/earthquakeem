@@ -1,14 +1,6 @@
-function getCurrentDate() {
-  // create a new JavaScript Date to get a JS object representing the current date
-  var date = new Date();
-  
-  // "toLocaleDateString" is a method of Date objects
-  // it returns a string with the date formated to be readable
-  var readableDate = date.toLocaleDateString(); 
-  
-  return readableDate;
-}
-
-$( "#date" ).text( getCurrentDate );
-// jquery sets the text of the element with a "date" id 
-// with the result of the "getCurrentDate" function
+// select all "li" elements and set their text using a function
+$( "li" ).text( function() {
+  var currentText = $( this ).text(); // this refers to the current element on which the function is applied
+  // currentText equals "Learn 
+  return currentText + " !"
+} );
