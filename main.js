@@ -5,5 +5,5 @@ $( "li" ).text( function() {
   // currentText equals "Learn CSS" for the second "li"
   // currentText equals "Learn JS" for the third "li"
   
-  return currentText + " !"
+  return currentText + " !!!";
 } );
