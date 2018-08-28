@@ -10,4 +10,5 @@ function getCurrentDate() {
 }
 
 $( "#date" ).text( getCurrentDate );
-// the text of the element with a "date" id 
+// jquery sets the text of the element with a "date" id 
+// with the result of the "getCurrentDate" function
