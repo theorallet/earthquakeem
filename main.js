@@ -1,10 +1,9 @@
 // first let's create a few tasks with JS
 // this will help us review arrays and loops
 var tasks = [
-  "Revising arrays",
-  "Laundry",
+  "Review arrays",
   "Searching a stage",
-  "Meet Emmie"
+  "Laundry"
 ];
 
 // we select the "ul" element with the "taskList" id
