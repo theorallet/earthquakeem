@@ -1,12 +1,6 @@
-// select all "li" elements and 
-// for each, set their text using a function
-$( "li" ).text( function() {
-  // "this" refers to the current element on which the function is applied
-  // we need to select it with jQuery to use jQuery's methods
-  var currentText = $( this ).text(); 
-  // currentText equals "Learn HTML" for the first "li"
-  // currentText equals "Learn CSS" for the second "li"
-  // currentText equals "Learn JS" for the third "li"
-  
-  return currentText + " !!!";
-} );
+// the on method takes 2 parameters
+// first the type of event to listen for
+( we can find the complete list of event types here: https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events
+$( "#slider" ).on( 'change', function() {
+
+} )
