@@ -22,8 +22,9 @@ $( "li" ).on( "click", function() {
   $( this ).fadeOut();
 } );
 
-
+///////////////////////////////////////////////////////
 // now let's see how to add new tasks via an input box
+///////////////////////////////////////////////////////
 
 // when the user click on the button
 $( "button" ).on( "click", function() {
