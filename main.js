@@ -4,5 +4,7 @@
 // - a callback function to execute when the event is fired
 $( "#slider" ).on( 'change', function() {
   var value = $( this ).val(); // we retrieve the value of the slider and store it
-  $( "paragraph" ).css( 'font-size', value + 'px' ); 
+  $( "#paragraph" ).css( 'font-size', value + 'px' ); 
 } )
+
+console.log( $( "#slider" ).val() )
