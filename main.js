@@ -33,9 +33,21 @@ $( "button" ).on( "click", function() {
   
   // if it's not an empty string
   if( task !== "" ){
-    // we had this task to our list
-    taskList.append( "<li>" + task + "</li>" );
-    // and we clear the text in the input box
+    // we add this task to our list
+    
+    // we've seen that methods like ".css" can be used to get or set a css property according to the arguments passed
+    // instead of selecting elements, the "$" can also be used to create an HTML element if we pass it an HTML string
+    var newTask = $( "<li>" + task + "</li>" );
+    
+    // we had the event listener to fade it out when clicked
+    newTask.on( "click", function() {
+      $( this ).fadeOut();
+    } );
+    
+    // and we add it at the end of our tasks list
+    taskList.append( newTask );
+    
+    // finally, we clear the text in the input box
     $( "input" ).val( "" );
   }
 } );
