@@ -10,4 +10,20 @@ h3 {
   font-family: 'Playfair Display', serif;
   font-size: 60px;
   font-weight: 900;
+  text-align: center;
+}
+
+input {
+  height: 35px;
+  width: 70%;
+  border: none;
+}
+
+button {
+  width: 28%;
+}
+
+li {
+  background: white;
+  padding: 15px;
 }
