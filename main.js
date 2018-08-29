@@ -24,7 +24,7 @@ $( "li" ).on( "click", function() {
 } );
 
 
-// now let's add some input tasks
+// now let's see how to add new tasks via an input box
 
 // when the user click on the button
 $( "button" ).on( "click", function() {
