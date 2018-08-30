@@ -16,8 +16,8 @@ $.getJSON( "https://randomuser.me/api/?results=100", function( data ) {
     img.attr( "src", user.picture.large );
     imgContainer.append( img );
     
-    var userData = $( "<div class='user-data'></div>" );
-    userData.text( user.name.first + " " + user.name.last );
+    var userData = $( "<p class='user-data'></p>" );
+    userData.html( user.name.first + "<br>" + user.name.last );
     imgContainer.append( userData );
     
     body.append( imgContainer );
