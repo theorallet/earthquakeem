@@ -4,6 +4,7 @@
 }
 
 body {
+  background: black;
   text-align: center;
   line-height: 0;
 }
@@ -12,20 +13,26 @@ body {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  transition: left 0.3s ease-out;
+  cursor: pointer;
 }
 
 .user-data {
   position: absolute;
   bottom: 0;
+  left: -100%;
   width: 100%;
-  height: 20px;
-  background: rgba( 0, 0, 0, 0.5 );
+  height: 60px;
+  background: rgba( 0, 0, 0, 0.3 );
+  
+  text-align: left;
   color: white;
   font-family: sans-serif;
-  transition: left 0.3s ease-out;
+  font-size: 20px;
+  line-height: 24px;
+
+  transition: left 0.3s ease-in;
 }
 
 .img-container:hover .user-data {
-  left: -100%;
+  left: 0;
 }

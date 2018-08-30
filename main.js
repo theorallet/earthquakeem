@@ -1,4 +1,4 @@
-$.getJSON( "https://randomuser.me/api/?results=300", function( data ) {
+$.getJSON( "https://randomuser.me/api/?results=100", function( data ) {
   console.log( data ); // print data in the console
   var users = data.results; // results is an array of users
   
@@ -11,7 +11,9 @@ $.getJSON( "https://randomuser.me/api/?results=300", function( data ) {
     var user = users[ i ];
     
     var imgContainer = $( "<div class='img-container'></div>" );
-    var img = $( "<img src='" + user.picture.large + "'>" );
+    
+    var img = $( "<img>" );
+    img.attr( "src", user.picture.large );
     imgContainer.append( img );
     
     var userData = $( "<div class='user-data'></div>" );
@@ -20,5 +22,4 @@ $.getJSON( "https://randomuser.me/api/?results=300", function( data ) {
     
     body.append( imgContainer );
   }
-  
 } );
