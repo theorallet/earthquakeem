@@ -3,7 +3,11 @@ body, html {
 }
 
 body {
-  background-image: linear-gradient(120deg, #FF00A1, #F6FF00);
+  background-image: linear-gradient(27deg, #654321, #123456);
+}
+
+.container {
+  background: white;
 }
 
 h2 {
