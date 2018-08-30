@@ -1,4 +1,5 @@
 // first let's create a few tasks with JS
+// we could start with an empty list but
 // this will help us review arrays and loops
 var tasks = [
   "Review arrays",
