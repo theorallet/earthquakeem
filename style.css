@@ -9,5 +9,19 @@ body {
 }
 
 .img-container {
+  display: inline-block;
+  position: relative;
+}
+
+.user-data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  text: white;
+  font-family: sans-serif;
+}
+
+.img-container:hover .user-data{
 
 }
