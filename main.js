@@ -1,6 +1,6 @@
-$.getJSON( "https://randomuser.me/api/?results=100", function( data ) {
-  console.log( data ); // print data in the console
-  var users = data.results; // results is an array of users
+$.getJSON( "https://randomuser.me/api/?results=100", function( json ) {
+  console.log( json ); // print data in the console
+  var users = json.results; // results is an array of users
   
   // store the "body" of our document inside a jQuery object
   var body = $( "body" );
