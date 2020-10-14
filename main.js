@@ -11,11 +11,15 @@ $.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.ge
   number.css("color", "red");
   number.css( "font-size", nb*5 + "px" ); 
   
-  // Faire la 
-  // Faire des cards
-  // convertir la date (timestamp to datetime)
-  // mag = magnitude
+  // Avec une boucle qui traverse le json, récupère l'attribut title
+  // pour chaque tremblements, crée un objet bouton
+  
 
 });
+
+// Fonction evenement clic de boutton
+// Quand un bouton est cliqué, créer un paragraphe avec les infos intéressantes
+// convertir la date (timestamp to datetime)
+// mag = magnitude
 
 console.log ("Theo");
