@@ -1,0 +1,54 @@
+ody {
+  margin-top: 1em;
+}
+    
+h1 {
+  text-align : center; 
+  font-family: 'Bebas Neue', cursive;
+  color: #eb1a20; 
+  font-weight: bolder; 
+  font-style: normal;
+  font-size : 500%;
+
+}
+    
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  color: black;
+  font-weight: bolder; 
+}
+
+h3 {
+  text-align : center; 
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h4 {
+  font-family: 'Bebas Neue', cursive;
+  color: black;
+  text-align : center;
+  font-size : 350%;
+}
+
+p {
+  text-align : justify ;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+hr {
+  border-top: 2px solid #eb1a20;
+}
+
+/* Classes */
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ball {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  height: 40px;
+}
