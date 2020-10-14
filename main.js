@@ -12,25 +12,31 @@ $.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.ge
   number.css( "font-size", nb*5 + "px" ); 
 });
 
-// DEFINE VARIABLES
-// Define size of map group
-// Full world map is 2:1 ratio
-// Using 12:5 because we will crop top and bottom of map
-var w = 3000;
-var h = 1250;
-// variables for catching min and max zoom factors
-var minZoom;
-var maxZoom;
+/* global d3 */
+$.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson', function(data) {
+    // Set up the projection. We're using a version of Albers for the US.
+    projection = d3.geoMercator()
+      .fitSize([width, height], data);
 
-// Define map projection
-var projection = d3
-   .geoEquirectangular()
-   .center([0, 15]) // set centre to further North
-   .scale([w/(2*Math.PI)]) // scale to fit group width
-   .translate([w/2,h/2]) // ensure centred in group
-;
+    // Set up the path-drawing function
+    path = d3.geoPath().projection(projection);
 
-var myArray = [ 100, "Bob", "Steve", 10 ];
-console.log ( myArray[ 0 ] );
+    // Add the states to the SVG
+    svg.append('g')
+      .selectAll('path')
+      .data(data.features) // Put the GeoJSON data in D3
+      .enter().append('path') // For each feature, add a path element
+      .attr('d', path) // Draw the path for each feature in the GeoJSON
+      .classed('state', true); // Add a 'state' class to each state
+  });
+// Create an SVG element for our map
+var svg = d3.select("body")
+  .append("svg");
+
+var width = svg.node().getBoundingClientRect().width;
+var height = svg.node().getBoundingClientRect().height;
+
+var projection;
+var path;
 
 console.log ("Theo");
