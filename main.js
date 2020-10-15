@@ -55,7 +55,13 @@ $.getJSON(
           }
         }
         elem.append("</br>")
-        elem.append("Magnitude: " + feat.properties.mag)
+        elem.append("Magnitude: " + feat.properties.mag + " ml")
+        elem.append("</br>")
+        elem.append("Number of station: " + feat.properties.nst)
+        elem.append("</br>")
+        elem.append("Time: " + feat.properties. + " ml")
+        elem.append("</br>")
+        elem.append("Number of station: " + feat.properties.nst)
       });
     });
   }
