@@ -51,8 +51,7 @@ $.getJSON(
 
     // then we listen for "click" events on each "li" elements
     $(".earthquake").on("click", function() {
-      if
-      else {
+      var i=1;
       var mg = $("#mg");
 
       var elem = $(this);
@@ -69,26 +68,33 @@ $.getJSON(
               break;
             }
           }
-          elem.append("</br>");
-          var delta = Math.round(
-            (new Date() - new Date(feat.properties.time)) / 60000
-          );
-          var date = new Date(feat.properties.time).toLocaleString("en-US");
-          elem.append(
-            "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
-          );
-          elem.append("</br>");
-          elem.append("<b>Place: </b>" + feat.properties.place);
-          elem.append("</br>");
-          elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
-          elem.append("</br>");
-          elem.append("<b>Number of station: </b>" + feat.properties.nst);
-          elem.append("</br>");
-          elem.append(
-            "<b>Travel Time Residual: </b>" + feat.properties.rms + " s"
-          );
-          elem.append("</br>");
-          elem.append("<b>Azimuthal gap: </b>" + feat.properties.gap + "°");
+          
+          if(typeof feat === "undefined") {
+            console.log(elem.getElementsByClassName("example"));
+            elem[0].innerText = "Test"
+          }
+          else {
+            elem.append("</br>");
+            var delta = Math.round(
+              (new Date() - new Date(feat.properties.time)) / 60000
+            );
+            var date = new Date(feat.properties.time).toLocaleString("en-US");
+            elem.append(
+              "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
+            );
+            elem.append("</br>");
+            elem.append("<b>Place: </b>" + feat.properties.place);
+            elem.append("</br>");
+            elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
+            elem.append("</br>");
+            elem.append("<b>Number of station: </b>" + feat.properties.nst);
+            elem.append("</br>");
+            elem.append(
+              "<b>Travel Time Residual: </b>" + feat.properties.rms + " s"
+            );
+            elem.append("</br>");
+            elem.append("<b>Azimuthal gap: </b>" + feat.properties.gap + "°");
+          }
         }
       );
     });
