@@ -42,8 +42,18 @@ $.getJSON(
     $("li").on("click", function() {
       // we select the current "li" on which there is a "click"
       // and we make them disappear slowly
-      console.log($( this ).text)
-      $( this ).eq[i].properties.place();;
+      var title = $(this)[0].innerText;
+      
+      $.getJSON(
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+      function(json) {
+        if (json.features.title === title) {
+          return json.features
+        }
+      });
+        console.log(yahooOnly)
+      });
+      //$( this ).eq[i].properties.place();;
     });
   }
 );
