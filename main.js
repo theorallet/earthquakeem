@@ -60,7 +60,7 @@ $.getJSON(
       $.getJSON(
         "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
         function(json) {
-                    
+          
           var feat;
           var eq = json.features;
           for (var i = 0; i < json.features.length; i = i + 1) {
@@ -86,17 +86,31 @@ $.getJSON(
               "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
             );
             elem.append("</br>");
-            elem.append("<b>Place: </b>" + feat.properties.place);
+            elem.append("<b>Place: </b>" + feat.properties.place.replace(/null/i, "\"\""));
             elem.append("</br>");
             elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
             elem.append("</br>");
-            elem.append("<b>Number of station: </b>" + feat.properties.nst);
+            var nst;
+            if(feat.properties.nst){
+              nst = feat.properties.nst;
+            }
+            else {
+              nst = "0"
+            }
+            elem.append("<b>Number of station: </b>" + nst);
             elem.append("</br>");
             elem.append(
               "<b>Travel Time Residual: </b>" + feat.properties.rms + " s"
             );
             elem.append("</br>");
-            elem.append("<b>Azimuthal gap: </b>" + feat.properties.gap + "°");
+            var gap;
+            if(feat.properties.gap){
+              gap = feat.properties.gap;
+            }
+            else {
+              gap = "0"
+            }
+            elem.append("<b>Azimuthal gap: </b>" + gap + "°");
           }
         }
       );
