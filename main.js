@@ -3,17 +3,25 @@ $.getJSON(
   function(json) {
     var nb_earthquake = $("#nb_earthquake");
     var nb = json.features.length;
+    var number = $("#nb");
     // rajouter une fonction if pour le singulier
     // Option 1: si 0, tu vas changer la phrase + écrire en vert
     // Option 2: si 1, mettre au singulier
     // Option 3: plus de 1
-    
-   nb_earthquake.html(
-        '<span id="nb">' +
-        nb +
-        "</span> earthquakes have happened in the past hour.";
+    if(nb == 0) {
+      nb_earthquake.html("Amazing, in the past hour, there was no earthquake in the US!");
+    }
+    else if (nb == 1) {
+      nb_earthquake.html('<span id="nb">' + nb + "</span> earthquake only has happened in the past hour.");
+      var number = $("#nb");
+    }
+    else {
+      nb_earthquake.html('<span id="nb">' + nb + "</span> earthquakes have happened in the past hour.");
+      var number = $("#nb");
+    }
+    //nb_earthquake.html('<span id="nb">' + nb + "</span> earthquakes have happened in the past hour.");
 
-    var number = $("#nb");
+    
     number.css("color", "red");
     number.css("font-size", nb * 5 + "px");
 
@@ -27,7 +35,6 @@ $.getJSON(
 
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
-      console.log(eq[i]);
       eqList.append("<li>" + eq[i].properties.title + "</li>");
     }
 
@@ -35,6 +42,7 @@ $.getJSON(
     $("li").on("click", function() {
       // we select the current "li" on which there is a "click"
       // and we make them disappear slowly
+      console.log($( this ).text)
       $( this ).eq[i].properties.place();;
     });
   }
