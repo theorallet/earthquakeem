@@ -26,7 +26,8 @@ $.getJSON(
 
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
-      eqList.append("<li>" + eq[i] + "</li>");
+      console
+      eqList.append("<li>" + eq[i].title + "</li>");
     }
 
     // then we listen for "click" events on each "li" elements
