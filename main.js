@@ -21,13 +21,12 @@ $.getJSON(
 
     var eq = json.features;
     var eqList = $("#eqList");
+
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
       eqList.append("<li>" + eq[i] + "</li>");
     }
-    
-    
-    
+
     // then we listen for "click" events on each "li" elements
     $("li").on("click", function() {
       // we select the current "li" on which there is a "click"
