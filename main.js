@@ -8,23 +8,11 @@ $.getJSON(
     // Option 2: si 1, mettre au singulier
     // Option 3: plus de 1
     
-    if (nb <= 0)
-    nb_earthquake.html(
-      '<span id="nb">' +
+   nb_earthquake.html(
+        '<span id="nb">' +
         nb +
-        "</span> earthquakes have happened in the past hour."
-      
-    else {
-      nb_earthquake.html(
-      '<span id="nb">' +
-        nb +
-        "</span> earthquakes have happened in the past hour."
-      if (nb > 1)
-    nb_earthquake.html(
-      '<span id="nb">' +
-        nb +
-        "</span> earthquakes have happened in the past hour."
-    );
+        "</span> earthquakes have happened in the past hour.";
+
     var number = $("#nb");
     number.css("color", "red");
     number.css("font-size", nb * 5 + "px");
