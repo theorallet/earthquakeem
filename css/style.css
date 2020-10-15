@@ -56,3 +56,11 @@ svg rect {
   text-align : center;
   font-size : 150% ;
 }
+.earthquake{
+  background-color: lightgrey;
+  border-width: thin;
+  border-color: darkgrey;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 10px;
+}
