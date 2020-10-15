@@ -7,6 +7,19 @@ $.getJSON(
     // Option 1: si 0, tu vas changer la phrase + écrire en vert
     // Option 2: si 1, mettre au singulier
     // Option 3: plus de 1
+    
+    if (nb <= 0)
+    nb_earthquake.html(
+      '<span id="nb">' +
+        nb +
+        "</span> earthquakes have happened in the past hour."
+      
+    else {
+      nb_earthquake.html(
+      '<span id="nb">' +
+        nb +
+        "</span> earthquakes have happened in the past hour."
+      if (nb > 1)
     nb_earthquake.html(
       '<span id="nb">' +
         nb +
