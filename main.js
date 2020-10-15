@@ -19,6 +19,8 @@ $.getJSON(
     // Avec une boucle qui traverse le json, récupère l'attribut title
     // pour chaque tremblements, crée un objet bouton
 
+    var title = json.features.title
+    
     var eq = json.features;
     var eqList = $("#eqList");
 
