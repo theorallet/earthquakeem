@@ -3,7 +3,6 @@ $.getJSON(
   function(json) {
     var nb_earthquake = $("#nb_earthquake");
     var nb = json.features.length;
-    var number = $("#nb");
     // rajouter une fonction if pour le singulier
     // Option 1: si 0, tu vas changer la phrase + écrire en vert
     // Option 2: si 1, mettre au singulier
@@ -112,8 +111,8 @@ $.getJSON(
             }
             elem.append("<b>Azimuthal gap: </b>" + gap + "°");
             
-            elem.append('<div class="circle" id='+feat.properties.mag+'></div>')
-            var circle = $("#" + feat.properties.mag);
+            elem.append('<div class="circle" id=circle_"'+ feat.properties.title + '"></div>')
+            var circle = $("#circle_" + feat.properties.title);
             console.log(circle);
             circle.css("height", feat.properties.mag * 30 + "px");
             circle.css("width", feat.properties.mag * 30 + "px");

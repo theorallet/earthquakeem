@@ -66,10 +66,10 @@ svg rect {
 }
 
 .circle {
-            width: 30px;
-            height: 30px;
-            -webkit-border-radius: 25px;
-            -moz-border-radius: 25px;
-            border-radius: 25px;
-            background: #eb1a20;
-         }
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 50%;
+  background: #eb1a20;
+}
