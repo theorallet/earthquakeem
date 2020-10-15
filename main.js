@@ -111,9 +111,9 @@ $.getJSON(
             }
             elem.append("<b>Azimuthal gap: </b>" + gap + "°");
             
-            elem.append('<div class="circle" id=circle_"'+ feat.properties.title + '"></div>')
-            var circle = $("#circle_" + feat.properties.title);
-            console.log(circle);
+            elem.append('<div class="circle" id="'+ feat.properties.title + ' width="50px"></div>')
+            var circle = elem[0].getElementsByClassName("circle")[0];
+            console.log(circle)
             circle.css("height", feat.properties.mag * 30 + "px");
             circle.css("width", feat.properties.mag * 30 + "px");
           }
