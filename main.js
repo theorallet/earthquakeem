@@ -51,8 +51,8 @@ $.getJSON(
 
     // then we listen for "click" events on each "li" elements
     $(".earthquake").on("click", function() {
-      // we select the current "li" on which there is a "click"
-      // and we make them disappear slowly
+      if
+      else {
       var mg = $("#mg");
 
       var elem = $(this);
@@ -77,6 +77,8 @@ $.getJSON(
           elem.append(
             "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
           );
+          elem.append("</br>");
+          elem.append("<b>Place: </b>" + feat.properties.place);
           elem.append("</br>");
           elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
           elem.append("</br>");
