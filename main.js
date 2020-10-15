@@ -61,10 +61,10 @@ $.getJSON(
         elem.append("</br>")
         elem.append("Number of station: " + feat.properties.nst)
         elem.append("</br>")
+        var delta = Math.round((new Date() - new Date(feat.properties.time)) / 60000)
         var date =  new Date(feat.properties.time).toLocaleString("en-US")
-        elem.append("Time: " + date)
+        elem.append("Time: " + date + " (" + delta + " minutes ago)") +
         elem.append("</br>")
-        var delta = 
         elem.append("Number of station: " + feat.properties.nst)
       });
     });
