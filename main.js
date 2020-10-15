@@ -74,15 +74,19 @@ $.getJSON(
             (new Date() - new Date(feat.properties.time)) / 60000
           );
           var date = new Date(feat.properties.time).toLocaleString("en-US");
-          elem.append("<b> Time: </b> " + date + " (" + delta + " minutes ago)");
+          elem.append(
+            "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
+          );
           elem.append("</br>");
           elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
           elem.append("</br>");
           elem.append("<b>Number of station: </b>" + feat.properties.nst);
           elem.append("</br>");
-          elem.append("Travel Time Residual: " + feat.properties.rms + " s");
+          elem.append(
+            "<b>Travel Time Residual: </b>" + feat.properties.rms + " s"
+          );
           elem.append("</br>");
-          elem.append("Azimuthal gap: " + feat.properties.gap + "°");
+          elem.append("<b>Azimuthal gap: </b>" + feat.properties.gap + "°");
         }
       );
     });
