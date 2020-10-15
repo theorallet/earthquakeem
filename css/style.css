@@ -51,5 +51,8 @@ svg rect {
   margin-right: auto;
 }
 .earthquake_title{
-  
+  font-family: 'Bebas Neue', cursive;
+  color: black;
+  text-align : center;
+  font-size : 150%;
 }
