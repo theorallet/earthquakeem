@@ -19,22 +19,22 @@ $.getJSON(
     // Avec une boucle qui traverse le json, récupère l'attribut title
     // pour chaque tremblements, crée un objet bouton
 
-    var title = json.features.title
-    
+    var title = json.features.title;
+
     var eq = json.features;
     var eqList = $("#eqList");
 
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
-      console
-      eqList.append("<li>" + eq[i].title + "</li>");
+      console.log(eq[i]);
+      eqList.append("<li>" + eq[i].properties.title + "</li>");
     }
 
     // then we listen for "click" events on each "li" elements
     $("li").on("click", function() {
       // we select the current "li" on which there is a "click"
       // and we make them disappear slowly
-      $(this).fadeOut();
+      $( this ).eq[i].properties.place();;
     });
   }
 );
