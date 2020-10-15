@@ -27,7 +27,7 @@ $.getJSON(
       var number = $("#nb");
     }
     //nb_earthquake.html('<span id="nb">' + nb + "</span> earthquakes have happened in the past hour.");
-
+    console.log(number)
     number.css("color", "red");
     number.css("font-size", nb * 5 + "px");
 
@@ -76,19 +76,21 @@ $.getJSON(
               "</span>"
           }
           else {
-            elem.append("</br>");
+            elem.append('<div class="row"><div class="seven columns">')
+            var elem_row = $(elem[0].getElementsByClassName("seven columns")[0]);
+            elem_row.append("</br>");
             var delta = Math.round(
               (new Date() - new Date(feat.properties.time)) / 60000
             );
             var date = new Date(feat.properties.time).toLocaleString("en-US");
-            elem.append(
+            elem_row.append(
               "<b> Time: </b> " + date + " <i>(" + delta + " minutes ago)"
             );
-            elem.append("</br>");
-            elem.append("<b>Place: </b>" + feat.properties.place.replace(/null/i, "\"\""));
-            elem.append("</br>");
-            elem.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
-            elem.append("</br>");
+            elem_row.append("</br>");
+            elem_row.append("<b>Place: </b>" + feat.properties.place.replace(/null/i, "\"\""));
+            elem_row.append("</br>");
+            elem_row.append("<b>Magnitude: </b> " + feat.properties.mag + " ml");
+            elem_row.append("</br>");
             var nst;
             if(feat.properties.nst){
               nst = feat.properties.nst;
@@ -96,12 +98,12 @@ $.getJSON(
             else {
               nst = "0"
             }
-            elem.append("<b>Number of station: </b>" + nst);
-            elem.append("</br>");
-            elem.append(
+            elem_row.append("<b>Number of station: </b>" + nst);
+            elem_row.append("</br>");
+            elem_row.append(
               "<b>Travel Time Residual: </b>" + feat.properties.rms + " s"
             );
-            elem.append("</br>");
+            elem_row.append("</br>");
             var gap;
             if(feat.properties.gap){
               gap = feat.properties.gap;
@@ -109,10 +111,10 @@ $.getJSON(
             else {
               gap = "0"
             }
-            elem.append("<b>Azimuthal gap: </b>" + gap + "°");
+            elem_row.append("<b>Azimuthal gap: </b>" + gap + "°");
             
-            elem.append('<div class="circle" id="'+ feat.properties.title + ' width="50px"></div>')
-            var circle = elem[0].getElementsByClassName("circle")[0];
+            elem_row.append('<div class="circle" id="'+ feat.properties.title + '"></div>')
+            var circle = $(elem[0].getElementsByClassName("circle")[0]);
             console.log(circle)
             circle.css("height", feat.properties.mag * 30 + "px");
             circle.css("width", feat.properties.mag * 30 + "px");
