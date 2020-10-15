@@ -28,30 +28,36 @@ $.getJSON(
     // Avec une boucle qui traverse le json, récupère l'attribut title
     // pour chaque tremblements, crée un objet bouton
 
-    var title = json.features.title;
-
     var eq = json.features;
     var eqList = $("#eqList");
 
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
-      eqList.append("<li>" + eq[i].properties.title + "</li>");
+      eqList.append('<p class="earthquake" id="' + eq[i].properties.title + '">' + eq[i].properties.title + "</p>");
     }
 
     // then we listen for "click" events on each "li" elements
-    $("li").on("click", function() {
+    $(".earthquake").on("click", function() {
       // we select the current "li" on which there is a "click"
       // and we make them disappear slowly
+      var elem = $(this);
       var title = $(this)[0].innerText;
       
       $.getJSON(
       "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
       function(json) {
-        if (json.features.title === title) {
-          return json.features
+        var feat;
+        var eq = json.features;
+        for (var i = 0; i < json.features.length; i = i + 1) {
+          if (eq[i].properties.title === title) {
+            feat = eq[i];
+            break;
+          }
         }
-      });
-        console.log(yahooOnly)
+        console.log(feat)
+        console.log($(this))
+        elem.append("</br>")
+        elem.append("Magnitude: " + feat.properties.mag)
       });
       //$( this ).eq[i].properties.place();;
     });
