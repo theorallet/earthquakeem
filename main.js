@@ -40,6 +40,8 @@ $.getJSON(
     $(".earthquake").on("click", function() {
       // we select the current "li" on which there is a "click"
       // and we make them disappear slowly
+      var mg = $("#mg")
+      
       var elem = $(this);
       var title = $(this)[0].innerText;
       
@@ -70,4 +72,4 @@ $.getJSON(
 // TODO
 // 1. rajouter les éléments utiles pour le premier click
 // 2. style.css = rajouter un beau style
-// 3.
+// 3. convertir date
