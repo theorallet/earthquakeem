@@ -70,8 +70,10 @@ $.getJSON(
           }
           
           if(typeof feat === "undefined") {
-            console.log(elem.getElementsByClassName("example"));
-            elem[0].innerText = "Test"
+            console.log(elem[0].getElementsByClassName("earthquake_title")[0]);
+            elem[0].innerHTML = '<span class="earthquake_title">' +
+              elem[0].getElementsByClassName("earthquake_title")[0].innerHTML +
+              "</span>"
           }
           else {
             elem.append("</br>");
