@@ -34,8 +34,6 @@ $.getJSON(
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
       eqList.append('<p class="earthquake" id="' + eq[i].properties.title + '"><span class="earthquake_title">' + eq[i].properties.title + "</span></p>");
-      var titre = $("#" + eq[i].properties.title);
-      number.css("font-size", 10 + eq[i].properties.mag * 5 + "px");
     }
 
     // then we listen for "click" events on each "li" elements
@@ -66,6 +64,7 @@ $.getJSON(
         var date =  new Date(feat.properties.time).toLocaleString("en-US")
         elem.append("Time: " + date)
         elem.append("</br>")
+        var delta = 
         elem.append("Number of station: " + feat.properties.nst)
       });
     });
