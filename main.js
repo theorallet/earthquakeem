@@ -33,7 +33,7 @@ $.getJSON(
 
     for (var i = 0; i < json.features.length; i = i + 1) {
       // we add a new "li" element with the task at index "i" in our "tasks" array inside
-      eqList.append('<p class="earthquake" id="' + eq[i].properties.title + '">' + eq[i].properties.title + "</p>");
+      eqList.append('<p class="earthquake" id="' + eq[i].properties.title + '"><span class="earthquake_title">' + eq[i].properties.title + "</span></p>");
     }
 
     // then we listen for "click" events on each "li" elements
@@ -54,19 +54,14 @@ $.getJSON(
             break;
           }
         }
-        console.log(feat)
-        console.log($(this))
         elem.append("</br>")
         elem.append("Magnitude: " + feat.properties.mag)
       });
-      //$( this ).eq[i].properties.place();;
     });
   }
 );
 
-// Fonction evenement clic de boutton
-// Quand un bouton est cliqué, créer un paragraphe avec les infos intéressantes
-// convertir la date (timestamp to datetime)
-// mag = magnitude
-
-console.log("Theo");
+// TODO
+// 1. rajouter les éléments utiles pour le premier click
+// 2. style.css = rajouter un beau style
+// 3.
