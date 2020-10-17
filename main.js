@@ -3,10 +3,6 @@ $.getJSON(
   function(json) {
     var nb_earthquake = $("#nb_earthquake");
     var nb = json.features.length;
-    // rajouter une fonction if pour le singulier
-    // Option 1: si 0, tu vas changer la phrase + écrire en vert
-    // Option 2: si 1, mettre au singulier
-    // Option 3: plus de 1
     if (nb == 0) {
       nb_earthquake.html(
         "Amazing, in the past hour, there was no earthquake in the US!"
@@ -26,19 +22,16 @@ $.getJSON(
       );
       var number = $("#nb");
     }
-    //nb_earthquake.html('<span id="nb">' + nb + "</span> earthquakes have happened in the past hour.");
+    
     console.log(number)
     number.css("color", "red");
     number.css("font-size", nb * 5 + "px");
-
-    // Avec une boucle qui traverse le json, récupère l'attribut title
-    // pour chaque tremblements, crée un objet bouton
-
+    
     var eq = json.features;
     var eqList = $("#eqList");
 
     for (var i = 0; i < json.features.length; i = i + 1) {
-      // we add a new "li" element with the task at index "i" in our "tasks" array inside
+     
       eqList.append(
         '<p class="earthquake" id="' +
           eq[i].properties.title +
@@ -48,7 +41,6 @@ $.getJSON(
       );
     }
 
-    // then we listen for "click" events on each "li" elements
     $(".earthquake").on("click", function() {
       var i=1;
       var mg = $("#mg");
